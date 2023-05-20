@@ -108,6 +108,7 @@ h1 {
     font-style: regular;
     color: #9d90b6;
     margin: 10px 0px;
+    cursor: default;
 }
 
 h2 {
@@ -116,6 +117,7 @@ h2 {
     font-size: 32px;
     font-style: regular;
     color: #9d90b6;
+    cursor: default;
 }
 
 p {

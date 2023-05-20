@@ -207,6 +207,12 @@ header .menu .active {
 
 /* HOVER EFFECT MENU */
 
+/* LOGO FILTER HOVER */
+
+.logo-header:hover {
+    filter: sepia(1000%) saturate(10000%) hue-rotate(247deg) contrast(53%)
+}
+
 .hover-underline-animation {
   display: inline-block;
   position: relative;

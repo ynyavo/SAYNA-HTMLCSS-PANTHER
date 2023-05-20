@@ -1,0 +1,230 @@
+/* FONTS */
+
+@font-face {
+    font-family: "beyno";
+    src: url("fonts/BEYNO.ttf");
+}
+
+@font-face {
+    font-family: "cantarell";
+    src: url("fonts/Cantarell-Regular.ttf");
+}
+
+@font-face {
+    font-family: "panthera";
+    src: url("fonts/panthera.otf");
+}
+
+@font-face {
+    font-family: "WakandaForever";
+    src: url("fonts/WakandaForever-Regular.ttf");
+}
+
+
+/* GLOBAL PROPS */
+
+p,
+label {
+    font-size: 14px;
+    margin: 20px 0px;
+    color: white;
+}
+
+:root {
+    --violet-primaire: #3D2DA6;
+    --violet-secondaire: #07338C;
+    --viloet-tertiaire: #021740;
+    --white: #FFFFFF;
+    --white-primaire: #F2CEF2;
+    --white-violet-1: #9E91B7;
+    --white-violet-2: #DF99F2;
+}
+
+
+/* DEFI */
+
+#defi {
+    background-image: url("../images/Enigme/Pantherenigme1.png");
+    background-size: 80%;
+    background-position: bottom left -10%;
+    background-repeat: no-repeat;
+    height: 130vh;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+#defi .card-defi {
+    width: 650px;
+}
+
+.card-defi .titre-defi {
+    font-size: 54px;
+    text-align: justify;
+    width: 550px;
+    margin: 45px 10px;
+    letter-spacing: 0.09em;
+}
+
+.texte-defi .paragraphe {
+    background-image: url("../images/Enigme/Pantherenigme2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 385px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    justify-content: center;
+}
+
+.texte-defi .paragraphe p {
+    width: 70%;
+    font-size: 11px;
+}
+
+.texte-defi img {
+    width: 100%;
+}
+
+/* ENIGME */
+
+.main-enigme {
+    margin-left: 15%;
+}
+
+.main-enigme .entete {
+    font-family: "WakandaForever";
+    letter-spacing: 0.25em;
+    line-height: 50px;
+    width: 70%;
+}
+
+.main-enigme .content-enigme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
+.transcription {
+    width: 600px;
+}
+
+.transcription .alphabet span {
+    font-family: "WakandaForever";
+}
+
+.transcription form {
+    margin-top: 150px;
+}
+
+.transcription form input[type=text] {
+    width: 520px;
+    height: 56px;
+    border: 1px solid #DF99F2;
+    border-radius: 38px;
+    padding-left: 30px;
+    margin: 20px 0px;
+    background-color: #ffffff00;
+    color: var(--white-primaire);
+}
+
+.transcription form .btn-enigme {
+    margin-left: 180px;
+    margin-top: 50px;
+}
+
+.transcription form .btn-enigme:hover {
+    filter: drop-shadow(0 5px 12px var(--white-primaire));
+    transition: .5s ease-in-out;
+}
+
+.content-enigme .info-enigme {
+    background-image: url("../images/Enigme/Pantherenigme2.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 385px;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.content-enigme .info-enigme p {
+    font-weight: lighter;
+    width: 70%;
+    font-size: 11px;
+}
+
+.info-enigme p span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+/* RESPONSIVE PART */
+
+
+
+@media (max-width: 800px) {
+    /* 800PX */
+    #defi {
+        background-size: contain;
+        background-position: center;
+        height: auto;
+        margin: 100px 0px;
+        justify-content: center;
+    }
+    #defi .card-defi {
+        width: 90%;
+        margin: 0;
+    }
+    .card-defi .titre-defi {
+        font-size: 48px;
+        width: auto;
+        text-align: center;
+        margin: auto;
+    }
+    .texte-defi .paragraphe {
+        background-size: contain;
+        background-position: center;
+        height: auto;
+        width: 100%;
+    }
+    .main-enigme {
+        margin-left: 0%;
+    }
+    .main-enigme .entete {
+        letter-spacing: 0.25em;
+        width: 100%;
+        text-align: center;
+    }
+    .main-enigme .content-enigme {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+    .content-enigme .info-enigme {
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        height: auto;
+    }
+    .transcription {
+        width: 90%;
+        margin: auto;
+    }
+    .transcription form {
+        margin-top: 50px;
+    }
+    .transcription form input[type=text] {
+        width: 100%;
+        padding: 0;
+    }
+    .transcription form .btn-enigme {
+        margin: auto;
+    }
+}

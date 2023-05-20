@@ -1,0 +1,695 @@
+/* Some extras */
+
+/* scrollbar */
+
+html::-webkit-scrollbar-track {
+  background-color: #24334f;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #c9c8c87a;
+  border-radius: 10px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #b3b2b26c;
+}
+
+html::-webkit-scrollbar-corner {
+  background-color: #1b2538;
+}
+
+/* text animation */
+
+.text-container {
+    opacity: 0;
+    animation: slide-in 1s forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .slide-left {
+    transition: transform 0.4s;
+  }
+  
+  .slide-right {
+    transition: transform 0.4s;
+  }
+  
+  .slide-left:hover {
+    transform: translateX(-10px);
+  }
+  
+  .slide-right:hover {
+    transform: translateX(10px);
+  }
+  
+/* FONTS */
+
+@font-face {
+    font-family: "beyno";
+    src: url("fonts/BEYNO.ttf");
+}
+
+@font-face {
+    font-family: "cantarell";
+    src: url("fonts/Cantarell-Regular.ttf");
+}
+
+@font-face {
+    font-family: "panthera";
+    src: url("fonts/PantheraRegular-MVZ9J.ttf");
+}
+
+@font-face {
+    font-family: "WakandaForever";
+    src: url("fonts/wakandaforever-regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    background: none;
+    -webkit-text-stroke: none
+;
+}
+
+/* GLOBAL PROPS */
+
+:root {
+    --violet1: #3D2DA6;
+    --violet2: #07338C;
+    --violet3: #021740;
+    --white: #FFFFFF;
+    --white2: #F2CEF2;
+    --rosé1: #9E91B7;
+    --rosé2: #DF99F2;
+}
+
+h1 {
+    font-family: "panthera";
+    font-weight: lighter;
+    font-size: 68px;
+    font-style: regular;
+    color: #9d90b6;
+    margin: 10px 0px;
+    cursor: default;
+}
+
+h2 {
+    font-family: "beyno";
+    font-weight: lighter;
+    font-size: 32px;
+    font-style: regular;
+    color: #9d90b6;
+    cursor: default;
+}
+
+p {
+    font-family: "cantarell";
+    font-weight: lighter;
+    font-size: 14px;
+    color: white;
+}
+
+body {
+    background-image: url("../images/All pages/arrière_plan.png");
+    /* height: 100%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-form {
+    font-family: "cantarell";
+    font-style: bold;
+    width: 174px;
+    height: 54px;
+    border-radius: 38px;
+    color: var(--violet3);
+    border: 0;
+    background-color: var(--white2);
+}
+
+
+/* HEADER STYLE */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 100px;
+}
+
+header .logo-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header .logo-header img {
+    margin: 5px;
+}
+
+header .menu ul li {
+    display: inline-block;
+    margin: 30px;
+}
+
+header .menu ul li a {
+    text-decoration: none;
+    font-family: "beyno";
+    font-size: 20px;
+    color: var(--white);
+}
+
+header .menu ul li a:hover,
+header .menu .active {
+    transform: scale(1.1);
+    color: var(--rosé1);
+    transition: .1s ease-in-out;
+}
+
+/* HOVER EFFECT MENU */
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: var(--rosé1);
+  text-decoration: none;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--rosé1);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after,
+.hover-underline-animation.active::after 
+{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+  
+
+/* MAIN STYLE  */
+
+/* BLACK PANTHER */
+
+.section-panther {
+    background-image: url("../images/Accueil/Pantherhome1..png");
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.section-panther .social-logo {
+    position: fixed;
+    top: 0;
+    left: 2.5%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border: 4px solid var(--rosé1);
+    border-bottom: 0;
+    border-top: 0;
+    border-right: 0;
+}
+
+.section-panther .social-logo .ligne {
+    height: 40vh;
+    border: 2px solid var(--rosé1);
+}
+
+.section-panther .social-logo .icon-social {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.section-panther .social-logo .icon-social img {
+    margin: 0px;
+    margin: 10px 10px;
+    padding-top: 5px;
+}
+
+.icon-social :hover{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(89%) saturate(0%) hue-rotate(235deg) brightness(104%) contrast(101%);
+}
+
+/* BLACK PANTHER INTRO */
+
+.section-panther .intro-panther {
+    margin-left: 12%;
+}
+
+.section-panther .intro-panther .sous-titre {
+    margin-bottom: 25px;
+}
+
+.section-panther .intro-panther .texte-intro {
+    display: block;
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.section-panther .intro-panther a {
+    color: white;
+    font-family: "cantarell";
+}
+
+/* HEROS SLIDE */
+
+.container-slides {
+    margin-left: 8%;
+    background-color: var(--violet3);
+    display: flex;
+}
+
+.container-slides .card {
+    display: flex;
+    align-items: center;
+    height: 300px;
+}
+
+/* added hover scale transform on the images */
+
+.container-slides .card img {
+    height: 100%;
+}
+
+.container-slides .card .img-active {
+    height: 100%;
+}
+
+.container-slides .card .img-active :hover {
+    transform: scale(0.8);
+    transition: .5s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+    transition: .2s ease-in-out;
+}
+
+/* hover, done */
+
+.container-slides .card .decription-slide {
+    clear: left;
+    margin-top: 30px;
+    margin: 0px 30px;
+}
+
+.container-slides .card .decription-slide .titre-slide {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.container-slides .card .decription-slide .texte-slide {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.container-slides .card .decription-slide a {
+    color: var(--white);
+    font-family: "cantarell";
+}
+
+/* BIOGRAPHY */
+
+#dob-prince {
+    padding-left: 15%;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+#dob-prince .contenu-text {
+    width: 600px;
+}
+
+#dob-prince .contenu-text h2 {
+    margin: 20px 0px;
+    font-size: 20px;
+}
+
+#dob-prince .contenu-text p span {
+    display: block;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+#dob-prince .presentation {
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dob-prince .presentation .img-panther {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+#dob-prince .presentation .profil {
+    width: 400px;
+    background-color: var(--white2);
+    border-radius: 10px;
+    margin: auto;
+    text-align: center;
+}
+
+#dob-prince .presentation .profil img {
+    margin-top: -60%;
+    width: 80%;
+}
+
+#dob-prince .presentation .profil .btn-profil {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 10px;
+    border-radius: 5px;
+    font-family: "cantarell";
+    background-color: var(--violet1);
+    color: var(--white);
+    padding: 10px 15px;
+    margin: 10px;
+}
+
+#dob-prince .presentation .profil .biographie {
+    text-align: left;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 100px;
+}
+
+#dob-prince .presentation .profil .biographie p span {
+    display: block;
+    margin: 10px;
+    color: var(--violet3);
+}
+
+#dob-prince .presentation .profil .biographie p .detail {
+    font-size: 0.8em;
+    font-style: normal;
+}
+
+.profil img:hover{
+    transform: scale(1.05);
+    transition: .2s ease-in-out;
+}
+
+/* CONTACT */
+
+#contact {
+    background-image: url("../images/Accueil/Pantherhome7.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    padding-top: 10%;
+}
+
+#contact .contact-main {
+    margin: auto;
+    width: 550px;
+    height: 550px;
+    background-image: linear-gradient(to bottom, var(--white) 15%, rgba(255, 255, 255, 0.0));
+    border-radius: 150px;
+    text-align: center;
+    padding: 50px 200px;
+}
+
+#contact .contact-main .question,
+#contact .contact-main .titre {
+    font-size: 14px;
+    font-family: "cantarell";
+    color: var(--violet3);
+}
+
+#contact .contact-main .titre {
+    font-size: 40px !important;
+    margin-bottom: 20px;
+}
+
+#contact .contact-main input[type=text],
+#contact .contact-main input[type=email],
+#contact .contact-main textarea {
+    width: 80%;
+    margin: 10px 0px;
+    background-color: #00000000;
+    border: 1.9px solid var(--violet3);
+    height: 48px;
+    padding-left: 20px;
+    border-radius: 28px;
+}
+
+#contact .contact-main textarea {
+    height: 150px;
+}
+
+#contact .contact-main input[type="text"]::placeholder,
+#contact .contact-main input[type="email"]::placeholder,
+#contact .contact-main textarea::placeholder {
+  font-weight: bold;
+  opacity: 70%;
+  color: black;
+  font-family: "cantarell";
+}
+
+#contact .contact-main .btn-form:hover {
+    filter: drop-shadow(0 5px 12px var(--violet3));
+    transition: .2s ease-in-out;
+}
+
+
+/* FOOTER STYLE */
+
+footer {
+    background-image: url("../images/All pages/back_footer.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 0px;
+}
+
+footer .logo-footer {
+    background-image: url("../images/All pages/footer1.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 385px;
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 50px;
+}
+
+footer .policies {
+    display: flex;
+    flex-direction: column;
+    height: 385px;
+    margin-left: 50px;
+}
+
+.policies .link {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.policies .link .titre {
+    font-family: "cantarell";
+    font-size: 22px;
+    color: var(--white);
+    letter-spacing: 0.28em;
+    margin-bottom: 25px;
+}
+
+.policies .link .pages ul li {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.policies .link .pages ul li a {
+    text-decoration: none;
+    font-family: "cantarell";
+    font-size: 16px;
+    color: var(--white);
+}
+
+.policies .link .social .social-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.policies .link .social .social-logo img:hover {
+    /* zoom: 1.1; */
+    transform: scale(1.10);
+}
+
+.policies .condition-right {
+    text-decoration: none;
+    font-family: "cantarell";
+    font-size: 14px;
+    color: var(--white);
+    align-items: center;
+    margin-top: 100px;
+}
+
+.policies .condition-right p span {
+    font-family: " sans-serif";
+    font-size: 5em;
+    border-radius: 50%;
+}
+
+
+/* RESPONSIVE PART */
+
+
+@media (max-width: 800px) {
+    /* 800PX */
+
+    /* MENU */
+    
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5%;
+    }
+    header .menu ul li {
+        display: block;
+        margin: 20px;
+        text-align: center;
+    }
+
+    /* FOOTER */
+    
+    footer {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    footer .policies {
+        margin: 0px;
+        height: auto;
+    }
+    .policies .link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .policies .link .pages,
+    .policies .link .social {
+        margin: 20px 0px;
+    }
+    .policies .condition-right {
+        margin-top: 10px;
+    }
+
+    /* BLACK PANTHER SECTION */
+
+    .section-panther .intro-panther {
+        margin: auto;
+        width: 90%;
+        text-align: center;
+        margin: 100px 0px;
+    }
+    .section-panther .intro-panther .texte-intro {
+        display: block;
+        width: auto;
+    }
+
+    /* HEROS SLIDE */
+    
+    .container-slides {
+        margin-left: 0%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-slides .card {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        width: 90%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .container-slides .card img {
+        width: 80%;
+    }
+    .container-slides .card .img-active {
+        height: auto;
+        transform: none;
+    }
+
+    /* BIOGRAPHY */
+    
+    #dob-prince {
+        padding: 0;
+        padding-top: 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    #dob-prince .presentation {
+        margin: auto;
+        width: 90%;
+        margin-top: 300px;
+    }
+    #dob-prince .contenu-text {
+        width: 90%;
+    }
+    #dob-prince .presentation .profil {
+        width: 90%;
+    }
+
+    /* CONTACT  */
+    
+    #contact .contact-main {
+        width: 90%;
+        height: auto;
+        /* padding: 0px; */
+        border-radius: 100px;
+        padding: 20px 0px;
+    }
+}

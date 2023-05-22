@@ -58,22 +58,28 @@ html::-webkit-scrollbar-corner {
     transform: translateX(10px);
   }
 
-  html{
-    opacity: 0;
-    transform: translateX(-100%);
-    animation: fadeSlideIn .5s ease-out forwards;
-}
+  /* SLIDE IN ANIMATION */
 
-@keyframes fadeSlideIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-100%);
+  h1, h2, p {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  h1, h2, p, a, img {
+    animation: 1s slide-right;
+  }
+  
+  @keyframes slide-right {
+    from {
+      margin-left: -100%;
     }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
+  
+    to {
+      margin-left: 0%;
     }
-}
+  }
+  
+   /* SLIDE IN ANIMATION END */
 
   
 /* FONTS */
